@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'cv',
+    title: 'CV Marco Perrullo',
     htmlAttrs: {
       lang: 'en'
     },
@@ -18,8 +18,12 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Nunito'
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -41,6 +45,24 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    ['@nuxtjs/i18n', {
+      locales: [
+       {
+          name: 'English',
+          code: 'en',
+          iso: 'en',
+          file: 'en.js'
+        },
+        {
+          name: 'Español',
+          code: 'es',
+          iso: 'es',
+          file: 'es.js'
+        },
+      ],
+      langDir: 'lang/',
+      defaultLocale: 'en'
+    }]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
